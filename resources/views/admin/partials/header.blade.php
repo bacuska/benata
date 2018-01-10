@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>Restaurant admin panel</title>
-    <meta name="description" content="Bootstrap Metro Dashboard">
-    <meta name="author" content="Dennis Ji">
-    <meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <meta name="description" content="">
+    <meta name="author" content="Ljuba">
+    <meta name="keyword" content="">
     <!-- end: Meta -->
-
+    
     <!-- start: Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- end: Mobile Specific -->
@@ -37,9 +36,6 @@
     <link rel="shortcut icon" href="{{URL::asset('img/favicon.ico')}}">
     <!-- end: Favicon -->
 
-
-
-
 </head>
 
 <body>
@@ -52,7 +48,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html"><span>Restaurant</span></a>
+            <a class="brand" href="#"><span>Bemata</span></a>
 
             <!-- start: Header Menu -->
             <div class="nav-no-collapse header-nav">
@@ -143,69 +139,6 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- start: Notifications Dropdown -->
-                    <li class="dropdown hidden-phone">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="icon-calendar"></i>
-                            <span class="badge red">
-								5 </span>
-                        </a>
-                        <ul class="dropdown-menu tasks">
-                            <li class="dropdown-menu-title">
-                                <span>You have 17 tasks in progress</span>
-                                <a href="#refresh"><i class="icon-repeat"></i></a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">iOS Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim red">80</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">Android Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim green">47</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim yellow">32</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim greenLight">63</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-										<span class="header">
-											<span class="title">ARM Development</span>
-											<span class="percent"></span>
-										</span>
-                                    <div class="taskProgress progressSlim orange">80</div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-menu-sub-footer">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- end: Notifications Dropdown -->
                     <!-- start: Message Dropdown -->
                     <li class="dropdown hidden-phone">
                         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
@@ -223,7 +156,7 @@
                                     <span class="avatar"><img src="{{URL::asset('vendor/img/avatar.jpg')}}" alt="Avatar"></span>
                                     <span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	Ljuba
 										     </span>
 											<span class="time">
 										    	6 min
@@ -239,7 +172,7 @@
                                     <span class="avatar"><img src="{{URL::asset('vendor/img/avatar.jpg')}}" alt="Avatar"></span>
                                     <span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	Ljuba
 										     </span>
 											<span class="time">
 										    	56 min
@@ -255,7 +188,7 @@
                                     <span class="avatar"><img src="{{URL::asset('vendor/img/avatar.jpg')}}" alt="Avatar"></span>
                                     <span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	Ljuba
 										     </span>
 											<span class="time">
 										    	3 hours
@@ -271,7 +204,7 @@
                                     <span class="avatar"><img src="{{URL::asset('vendor/img/avatar.jpg')}}" alt="Avatar"></span>
                                     <span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	Ljuba
 										     </span>
 											<span class="time">
 										    	yesterday
@@ -287,7 +220,7 @@
                                     <span class="avatar"><img src="{{URL::asset('vendor/img/avatar.jpg')}}" alt="Avatar"></span>
                                     <span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	Ljuba
 										     </span>
 											<span class="time">
 										    	Jul 25, 2012
@@ -307,7 +240,7 @@
                     <!-- start: User Dropdown -->
                     <li class="dropdown">
                         <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="halflings-icon white user"></i> Dennis Ji
+                            <i class="halflings-icon white user"></i> Ljuba
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -315,14 +248,13 @@
                                 <span>Account Settings</span>
                             </li>
                             <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-                            <li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
+                            <li><a href="#"><i class="halflings-icon off"></i> Logout</a></li>
                         </ul>
                     </li>
                     <!-- end: User Dropdown -->
                 </ul>
             </div>
             <!-- end: Header Menu -->
-
         </div>
     </div>
 </div>

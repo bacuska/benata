@@ -380,6 +380,7 @@ function template_functions(){
 	});
 
 	/* ---------- Datable ---------- */
+	var base_url = 'http://localhost/bemata/public/api';
 	$('.datatable').dataTable({
 			"sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span12'i><'span12 center'p>>",
 			"sPaginationType": "bootstrap",
@@ -398,9 +399,39 @@ function template_functions(){
 		else 					   $('i',$(this)).removeClass('chevron-down').addClass('chevron-up');
 		$target.slideToggle();
 	});
-	$('.btn-setting').click(function(e){
+	$('.user-action').click(function(e){
+		var id = $(this).attr('data-id');
 		e.preventDefault();
-		$('#myModal').modal('show');
+		$.get(base_url + "/user/" + id, function(data, status){
+			$('.first-name').text(data.data.first_name);
+			$('.last-name').text(data.data.last_name);
+			$('.role').text(data.data.role);
+			$('.created-at').text(data.data.created_at);
+			$('.status').text(data.data.is_active);
+        	$('#User').modal('show');
+    	});
+	});
+	$('.new-user').click(function(e){
+		e.preventDefault();
+		$('#UserCreate').modal('show');
+	});
+	$('.user-update').click(function(e){
+		var id = $(this).attr('data-id');
+		e.preventDefault();
+		$.get(base_url + "/user/" + id, function(data, status){
+			$('input[name="first_name"]').val(data.data.first_name);
+			$('input[name="last_name"]').val(data.data.last_name);
+			$('input[name="role"]').val(data.data.role);
+			$('input[name="email"]').val(data.data.email);
+			$('input[name="phone"]').val(data.data.phone);
+			$('input[name="nickname"]').val(data.data.nickname);
+			$('#form-update').text(data.data.id)
+         	$('#UserUpdate').modal('show');
+    	});
+		
+		// $.post(base_url + '/user/', function(data){
+		// 	console.log(data);
+		// });
 	});
 	
 	
