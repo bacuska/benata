@@ -5,17 +5,20 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest; 
 use App\Http\Requests\UpdateUserRequest; 
 use App\Bemata\Models\User;
+use App\Bemata\Models\Role;
 
 class UserController extends Controller {
 
     protected $user;
+    protected $role;
 
-    public function __construct(User $user){
+    public function __construct(User $user, Role $role){
         $this->user = $user;
+        $this->role = $role;
     }
 
     public function index() {
-        return view('admin.index')->with('users', $this->user->all());
+        return view('admin.index')->with('users', $this->user->all())->with('roles', $this->role->all());
     }
 
     public function apiUser($id) {

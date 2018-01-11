@@ -23,4 +23,8 @@ class RoleController extends Controller {
         return redirect()->back()->with('msg','Role created successfully.');
 	}
 
+	public function rolesModal() {
+		return view('admin.master')->with('roles',$this->role->all());	
+	}
+
 }

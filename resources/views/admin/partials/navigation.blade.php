@@ -4,7 +4,7 @@
         <div id="sidebar-left" class="span2">
             <div class="nav-collapse sidebar-nav">
                 <ul class="nav nav-tabs nav-stacked main-menu">
-                    <li><a href="{{ route('users.all') }}"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+                    <li><a href="/"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                     <li><a href="{{ route('users.all') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Users</span></a></li>
                     <li><a href="{{ route('role.all') }}"><i class="icon-edit"></i><span class="hidden-tablet"> Roles</span></a></li>
                     <li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Products</span></a></li>

@@ -65,7 +65,9 @@
             <div class="form-group">
                 <label for="role">Role</label>
                 <select name="role" id="role" class="form-control">
-                        <option value="1">Administrator</option>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                    @endforeach
                 </select>
             </div>    
     </div>
@@ -120,7 +122,9 @@
             <div class="form-group">
                 <label for="role">Role</label>
                 <select name="role" id="role" class="form-control">
-                        <option value="1">Administrator</option>
+                    @foreach($roles as $role)
+                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                    @endforeach
                 </select>
             </div>    
     </div>
@@ -136,48 +140,43 @@
         <button type="button" class="close" data-dismiss="modal">×</button>
         <h3>Role Update</h3>
     </div>
-    <div class="modal-body">        
-        <form action="" method="">
-            {{ csrf_field() }}
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input name="name" id="name" class="form-control" type="text" value="">
-            </div>
-            <div class="control-group">
-                <label class="control-label">User</label>
-                <div class="controls">
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="user-view" value="1" checked> View
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="user-create" value="option2"> Create
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="user-update" value="option3"> Update
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="user-delete" value="option4"> Delete
-                    </label>
-                </div>
-            </div>
-            <hr />
-            <div class="control-group">
-                <label class="control-label">Product</label>
-                <div class="controls">
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="product-view" value="1"> View
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="product-create" value="option2"> Create
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="product-update" value="option3"> Update
-                    </label>
-                    <label class="checkbox inline">
-                        <input type="checkbox" id="product-delete" value="option4"> Delete
-                    </label>
-                </div>
-            </div>
+    <div class="modal-body">
+        @foreach($roles as $role)
+            @if($role->name !== 'Admin')
+                <form action="" method="">
+                    {{ csrf_field() }}
+                    <div class="control-group">
+                        <label class="control-label">{{ $role->name }}</label>
+                        <div class="controls">
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="{{ strtolower($role->name).'-view' }}" value="{{ $role->view }}" 
+                                @if($role->view == 1)
+                                    checked
+                                @endif> View
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="{{ strtolower($role->name).'-create' }}" value="{{ $role->create }}"
+                                @if($role->create == 1)
+                                    checked
+                                @endif> Create
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="{{ strtolower($role->name).'-update' }}" value="{{ $role->update }}"
+                                @if($role->update == 1)
+                                    checked
+                                @endif> Update
+                            </label>
+                            <label class="checkbox inline">
+                                <input type="checkbox" name="{{ strtolower($role->name).'-delete' }}" value="{{ $role->delete }}"
+                                @if($role->delete == 1)
+                                    checked
+                                @endif> Delete
+                            </label>
+                        </div>
+                    </div>
+                <hr />
+            @endif
+        @endforeach
     </div>
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Update</button>
