@@ -30,7 +30,6 @@
     </div>
     <div class="modal-footer">
         <a href="#" class="btn" data-dismiss="modal">Close</a>
-        <a href="#" class="btn btn-primary">Save changes</a>
     </div>
 </div>
 
@@ -78,11 +77,12 @@
                         <option value="1">Administrator</option>
                 </select>
             </div>    
+    </div>
+        <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Create</button>
-        </form>
-    </div>
-    <div class="modal-footer">
-    </div>
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </form>
 </div>
 
 <div class="modal hide fade" id="UserUpdate">
@@ -132,20 +132,67 @@
                         <option value="1">Administrator</option>
                 </select>
             </div>    
+    </div>
+        <div class="modal-footer">
             <button type="submit" class="btn btn-primary">Update</button>
-        </form>
-    </div>
-    <div class="modal-footer">
-    </div>
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </form>
 </div>
 
-<div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-        <ul class="list-inline item-details">
-            <li><a href="http://themifycloud.com">Admin templates</a></li>
-            <li><a href="http://themescloud.org">Bootstrap themes</a></li>
-        </ul>
+<div class="modal hide fade" id="RoleUpdate">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Role Update</h3>
     </div>
+    <div class="modal-body">        
+        <form action="" method="">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" id="name" class="form-control" type="text" value="">
+            </div>
+            <div class="control-group">
+                <label class="control-label">User</label>
+                <div class="controls">
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="user-view" value="1"> View
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="user-create" value="option2"> Create
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="user-update" value="option3"> Update
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="user-delete" value="option4"> Delete
+                    </label>
+                </div>
+            </div>
+            <hr />
+            <div class="control-group">
+                <label class="control-label">Product</label>
+                <div class="controls">
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="product-view" value="1"> View
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="product-create" value="option2"> Create
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="product-update" value="option3"> Update
+                    </label>
+                    <label class="checkbox inline">
+                        <input type="checkbox" id="product-delete" value="option4"> Delete
+                    </label>
+                </div>
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+    </div>
+    </form>
 </div>
 
 <div class="clearfix"></div>

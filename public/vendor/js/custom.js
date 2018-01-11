@@ -433,6 +433,18 @@ function template_functions(){
 		// 	console.log(data);
 		// });
 	});
+	$('.role-update').click(function(e){
+		var id = $(this).attr('data-id');
+		e.preventDefault();
+		//$.get(base_url + "/roles/" + id, function(data, status){
+			// $('.first-name').text(data.data.first_name);
+			// $('.last-name').text(data.data.last_name);
+			// $('.role').text(data.data.role);
+			// $('.created-at').text(data.data.created_at);
+			// $('.status').text(data.data.is_active);
+        	$('#RoleUpdate').modal('show');
+    	//});
+	});
 	
 	
 	/* ---------- Progress  ---------- */

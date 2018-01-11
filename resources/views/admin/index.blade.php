@@ -105,13 +105,10 @@
                                     @endif
                                 </td>
                                 <td class="center">
-                                    <a data-id="{{ $user->id }}" class="user-action btn btn-success" href="#">
-                                        <i class="halflings-icon white zoom-in"></i>
-                                    </a>
-                                    <a data-id="{{ $user->id }}" class="user-update btn btn-info" href="#">
+                                    <a data-id="{{ $user->id }}" title="Update user" class="user-update btn btn-info" href="#">
                                         <i class="halflings-icon white edit"></i>
                                     </a>
-                                    <a data-id="{{ $user->id }}" class="user-delete btn btn-danger" href="#">
+                                    <a data-id="{{ $user->id }}" title="Delete user" class="user-delete btn btn-danger" href="#">
                                         <i class="halflings-icon white trash"></i>
                                     </a>
                                 </td>

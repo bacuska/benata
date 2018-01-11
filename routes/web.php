@@ -15,6 +15,11 @@ Route::get('/user/create',[
 	'as'   => 'user.view'
 ]);
 
+Route::get('/roles',[
+	'uses' => '\App\Bemata\Controllers\RoleController@index',
+	'as'   => 'role.all'
+]);
+
 Route::get('index',function(){
    return view('admin.index');
 });
