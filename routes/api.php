@@ -10,7 +10,7 @@ Route::post('/user/',[
 	'as'   => 'users.create'
 ]);
 
-Route::put('/user-update/{id}',[
+Route::post('/user-update/{id}',[
 	'uses' => '\App\Bemata\Controllers\UserController@apiUserUpdate',
 	'as'   => 'users.update'
 ]);

@@ -45,16 +45,14 @@ class UserController extends Controller {
 
     public function apiUserUpdate(UpdateUserRequest $request, $id) {
         $user = $this->user->find($id);
-var_dump($id);exit();
         $user->email      = $request->email;
         $user->first_name = $request->first_name;
         $user->last_name  = $request->last_name;
         $user->nickname   = $request->nickname;
         $user->role_id    = $request->role;
-        $user->password   = bcrypt($request->password);
         $user->phone      = $request->phone;
         $user->save();
-        if ( !$request->password == '') {
+        if (!$request->password == '') {
             $user->password = bcrypt($request->password);
         }
         $user->save();

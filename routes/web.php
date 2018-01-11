@@ -20,6 +20,11 @@ Route::get('/roles',[
 	'as'   => 'role.all'
 ]);
 
+Route::put('/roles/{id}',[
+	'uses' => '\App\Bemata\Controllers\RoleController@update',
+	'as'   => 'role.update'
+]);
+
 Route::get('index',function(){
    return view('admin.index');
 });

@@ -27,4 +27,8 @@ class RoleController extends Controller {
 		return view('admin.master')->with('roles',$this->role->all());	
 	}
 
+	public function update($id) {
+		var_dump($this->role->find($id));
+	}
+
 }

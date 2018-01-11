@@ -87,7 +87,7 @@
 
         <div id='form-update' class='display:none;'></div>
         
-        <form action="{{ route('users.update',['id' => 2]) }}" method="PUT" enctype="multipart/form-data">
+        <form action="{{ route('users.update',['id' => 2]) }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="first_name">First Name</label>
@@ -143,7 +143,7 @@
     <div class="modal-body">
         @foreach($roles as $role)
             @if($role->name !== 'Admin')
-                <form action="" method="">
+                <form action="{{ route('role.update',['id' => $role->id]) }}" method="PUT">
                     {{ csrf_field() }}
                     <div class="control-group">
                         <label class="control-label">{{ $role->name }}</label>
