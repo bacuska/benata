@@ -445,6 +445,10 @@ function template_functions(){
         	$('#RoleUpdate').modal('show');
     	//});
 	});
+	$('.new-role').click(function(e){
+		e.preventDefault();
+		$('#RoleCreate').modal('show');
+	});
 	
 	
 	/* ---------- Progress  ---------- */

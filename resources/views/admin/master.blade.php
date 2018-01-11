@@ -1,15 +1,6 @@
 @include('admin.partials.header')
 @include('admin.partials.navigation')
 <div id="content" class="span10">
-    <ul class="breadcrumb">
-        <li>
-            <i class="icon-home"></i>
-            <a href="index.html">Home</a>
-            <i class="icon-angle-right"></i>
-        </li>
-        <li><a href="#">Dashboard</a></li>
-    </ul>
-
     @yield('content')
 </div><!--/.fluid-container-->
 <!-- end: Content -->
@@ -156,7 +147,7 @@
                 <label class="control-label">User</label>
                 <div class="controls">
                     <label class="checkbox inline">
-                        <input type="checkbox" id="user-view" value="1"> View
+                        <input type="checkbox" id="user-view" value="1" checked> View
                     </label>
                     <label class="checkbox inline">
                         <input type="checkbox" id="user-create" value="option2"> Create
@@ -192,6 +183,27 @@
         <button type="submit" class="btn btn-primary">Update</button>
         <a href="#" class="btn" data-dismiss="modal">Close</a>
     </div>
+    </form>
+</div>
+
+<div class="modal hide fade" id="RoleCreate">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Create New Role</h3>
+    </div>
+    <div class="modal-body">
+        <form action="{{ route('role.create') }}" method="POST">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input name="name" id="name" class="form-control" type="text">
+            </div>
+    
+    </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
     </form>
 </div>
 

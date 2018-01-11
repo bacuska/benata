@@ -3,9 +3,9 @@
     <div class="row-fluid sortable">
         <div class="box span12">
             <div class="box-header" data-original-title>
-                <h2><i class="halflings-icon white user"></i><span class="break"></span>Role</h2>
+                <h2><i class="halflings-icon white role"></i><span class="break"></span>Role</h2>
                 <div class="box-icon">
-                    <a href="#" class="btn-setting new-role" title="Create new role"><i class="halflings-icon white user"></i></a>
+                    <a href="#" class="btn-setting new-role" title="Create new role"><i class="halflings-icon white role"></i></a>
                     <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
                 </div>
             </div>

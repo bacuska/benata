@@ -15,3 +15,7 @@ Route::put('/user-update/{id}',[
 	'as'   => 'users.update'
 ]);
 
+Route::post('/role/',[
+	'uses' => '\App\Bemata\Controllers\RoleController@apiRoleCreate',
+	'as'   => 'role.create'
+]);
