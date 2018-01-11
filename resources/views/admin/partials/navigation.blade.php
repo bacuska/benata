@@ -10,8 +10,7 @@
                     <li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Products</span></a></li>
                     <li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Categories</span></a></li>
                     <li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Orders</span></a></li>
-                    <li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Comments</span></a></li>
-                    <li><a href="#"><i class="icon-list-alt"></i><span class="hidden-tablet"> Statistic</span></a></li>
+                    <!-- <li><a href="#"><i class="icon-list-alt"></i><span class="hidden-tablet"> Statistic</span></a></li> -->
                 </ul>
             </div>
         </div>
